@@ -1,0 +1,21 @@
+// Layout
+
+.layout {
+  > section {
+    background-color: aliceblue;
+    padding: 4rem 2rem;
+    min-height: 80vh;
+    padding-bottom: 8rem;
+
+    > h1 {
+      font-size: 2rem;
+      margin: 0;
+      color: $grey-darker;
+      padding: 1rem 0 2rem;
+    }
+
+    @media (min-width: 768px) {
+      padding: 4rem;
+    }
+  }
+}

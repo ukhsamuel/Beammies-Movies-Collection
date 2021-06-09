@@ -1,0 +1,54 @@
+{
+    "env": {
+        "es2020": true,
+        "browser": true,
+        "node": true
+    },
+    "parser": "babel-eslint",
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended",
+        "airbnb",
+        "plugin:jsx-a11y/recommended",
+        "plugin:react-hooks/recommended",
+        "plugin:prettier/recommended"
+    ],
+    "settings": {
+        "import/resolver": {
+            "node": {
+                "extensions": [".js", ".jsx"]
+            }
+        }
+    },
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 11,
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react",
+        "eslint-plugin-jsx-a11y"
+    ],
+    "rules": {
+        "react/react-in-jsx-scope": "off",
+        "max-lines": ["warn", { "max": 400 }],
+        "max-statements": ["warn", 28, { "ignoreTopLevelFunctions": true }],
+        "max-lines-per-function": ["warn", { "max": 120, "skipComments": true }],
+        "react/jsx-fragments": ["warn", "syntax"],
+        "prettier/prettier": ["error", {}, { "usePrettierrc": true }],
+        "jsx-a11y/anchor-is-valid": [
+          "error",
+          {
+            "components": ["Link"],
+            "specialLink": ["hrefLeft", "hrefRight"],
+            "aspects": ["invalidHref", "preferButton"]
+          }
+        ],
+        "react/jsx-filename-extension": "off"
+    },
+    "globals": {
+        "React": "writable"
+    }
+}

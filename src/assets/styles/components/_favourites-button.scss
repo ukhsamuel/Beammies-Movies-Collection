@@ -1,0 +1,22 @@
+// Favourites Button
+
+.favourites-button {
+
+  button {
+    background: $blue;
+    border-radius: 50%;
+    height: 48px;
+    width: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  button:hover {
+    background: darken($blue, 5%);
+  }
+
+  img {
+    width: .75rem;
+  }
+}

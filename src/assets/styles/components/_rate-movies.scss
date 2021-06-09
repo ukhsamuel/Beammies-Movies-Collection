@@ -1,0 +1,53 @@
+// Rate Movies
+
+.rate-movies {
+  position: relative;
+  margin-left: 1rem;
+
+  button {
+    border-radius: 50%;
+    height: 48px;
+    width: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+      background: darken($blue, 5%);
+    }
+  }
+
+  .rate-button {
+    background: $blue;
+  }
+
+  img {
+    width: .75rem;
+  }
+
+  div {
+    position: absolute;
+    top: 120%;
+    left: 0;
+    background: $blue;
+    border-radius: .5rem;
+    padding: 1rem;
+    display: grid;
+    max-width: 170px;
+    grid-template-columns: repeat(auto-fill, 48px);
+
+    @media (min-width: $breakpoint-tablet) {
+
+      max-width: 300px;
+    }
+  }
+
+  &__temp {
+    position: absolute;
+    top: 35%;
+    left: 130%;
+    width: 100px;
+    color: white;
+    font-size: .875rem;
+  }
+}

@@ -1,0 +1,23 @@
+// Movie Grid
+
+.movie-grid {
+  display: grid;
+  gap: 2rem;
+  place-content: space-between;
+  grid-template-columns: repeat(auto-fill, 220px);
+
+  &__no-movie {
+    font-size: .875rem;
+    color: lighten($grey-dark, 4%);
+  }
+
+  @media (min-width: $breakpoint-mobile) {
+
+    gap: 1.5rem 2.5rem;
+  }
+
+  @media (min-width: $breakpoint-tablet) {
+
+    gap: 2rem 3rem;
+  }
+}

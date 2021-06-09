@@ -1,0 +1,23 @@
+// Mixins
+
+@mixin keyframes($animation-name) {
+  @keyframes #{$animation-name} {
+    @content;
+  }
+}
+
+@mixin animation($str) {
+  animation: #{$str};      
+}
+
+@include keyframes(loading-animation) {
+  0% {
+    background-color: #fff;
+  }
+  50% {
+    background-color: #edf1f1;
+  }
+  100% {
+    background-color: #fff;
+  }
+}

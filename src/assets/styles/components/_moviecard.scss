@@ -1,0 +1,128 @@
+// Movie Card
+
+.movie-card {
+  position: relative;
+  width: 100%;
+  border-radius: .5rem;
+  transition: height .3s ease;
+
+  &__placeholder {
+    height: 330px;
+    width: 220px;
+    border-radius: .5rem;
+    background-color: #f5f5f5;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .1);
+  }
+
+  &__loaded-image {
+    border-radius: .5rem;
+    width: 220px;
+    position: absolute;
+    left: 0;
+    object-fit: cover;
+    display: block;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .1);
+  }
+
+  &__placeholder-content,
+  &__content {
+    padding: 1.25rem .875rem;
+    position: relative;
+  }
+
+  &__placeholder-content {
+    div {
+      background: $grey-med;
+      height: .8rem;
+      width: 50%;
+    }
+
+    div:first-child {
+      width: 70%;
+      margin-top: .75rem;
+      margin-bottom: .875rem;
+    }
+
+    div:last-child {
+      position: absolute;
+      top: 0;
+      left: .875rem;
+      transform: translateY(-50%);
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+    }
+  }
+
+  &__overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: .5rem;
+    bottom: 0;
+    left: 0;
+  }
+
+  &__button {
+    position: absolute;
+    background: transparent;
+    width: 100%;
+    height: 100%;
+    border-radius: .5rem;
+    bottom: 0;
+    padding: 0;
+    left: 0;
+  }
+
+  &__content {
+
+    h4 {
+      font-size: 1.125rem;
+      color: $grey-darker;
+      margin-bottom: .25rem;
+      font-weight: 600;
+    }
+
+    p {
+      font-size: .875rem;
+      color: $grey-dark;
+    }
+
+    p.vote-average {
+      height: 38px;
+      width: 38px;
+      position: absolute;
+      top: 0;
+      left: .875rem;
+      transform: translateY(-50%);
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: .875rem;
+      color: $white;
+      font-weight: 600;
+      background-color: $blue;
+    }
+  }
+
+  .lazyload-wrapper {
+    border-radius: .5rem;
+    height: 330px;
+    width: 220px;
+  }
+
+  .favourites-button {
+    position: absolute;
+    top: 330px;
+    right: .875rem;
+    transform: translateY(-50%);
+
+    button {
+      height: 38px;
+      width: 38px;
+    }
+  }
+}
